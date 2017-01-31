@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ClevlandClinic" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2s6-Qc-4B0">
+                                <rect key="frame" x="54" y="75" width="559" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="IfY-5v-v0K"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textfieldChanges:" destination="BYZ-38-t0r" eventType="editingChanged" id="By4-Pt-zzB"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uef-11-dNZ">
+                                <rect key="frame" x="54" y="150" width="559" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="XST-sh-NSY"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textfieldChanges:" destination="BYZ-38-t0r" eventType="editingChanged" id="8ey-3O-sKW"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Dob: mm/dd/yyyy" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ov7-h1-jod">
+                                <rect key="frame" x="54" y="225" width="559" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="iYv-bJ-YKX"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                <connections>
+                                    <action selector="dobEditEnd:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="Iq8-aK-e6E"/>
+                                    <action selector="textfieldChanges:" destination="BYZ-38-t0r" eventType="editingChanged" id="wbV-8w-5lF"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bmn-tU-gRd">
+                                <rect key="frame" x="54" y="300" width="559" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="nZm-mT-hi7"/>
+                                </constraints>
+                                <state key="normal" title="Set Appointment">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="setAppointment:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bb4-xp-W4D"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bmn-tU-gRd" firstAttribute="top" secondItem="ov7-h1-jod" secondAttribute="bottom" constant="45" id="0vz-2W-6Su"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uef-11-dNZ" secondAttribute="trailing" constant="34" id="1bO-m8-EiN"/>
+                            <constraint firstItem="ov7-h1-jod" firstAttribute="top" secondItem="uef-11-dNZ" secondAttribute="bottom" constant="45" id="Jnc-jO-eFk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bmn-tU-gRd" secondAttribute="trailing" constant="34" id="KFr-7E-kKH"/>
+                            <constraint firstItem="2s6-Qc-4B0" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="55" id="RDH-bS-tgN"/>
+                            <constraint firstItem="2s6-Qc-4B0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="34" id="Sno-Yj-hZo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2s6-Qc-4B0" secondAttribute="trailing" constant="34" id="a0D-3W-01l"/>
+                            <constraint firstItem="bmn-tU-gRd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="34" id="jTQ-q1-EeG"/>
+                            <constraint firstItem="uef-11-dNZ" firstAttribute="top" secondItem="2s6-Qc-4B0" secondAttribute="bottom" constant="45" id="lhH-uU-71e"/>
+                            <constraint firstItem="uef-11-dNZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="34" id="qY4-mh-izZ"/>
+                            <constraint firstItem="ov7-h1-jod" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="34" id="vGd-Ad-gtz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ov7-h1-jod" secondAttribute="trailing" constant="34" id="wvz-Xw-zCa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="CCAppointmentBtn" destination="bmn-tU-gRd" id="Wi5-Z0-Dgo"/>
+                        <outlet property="CCDOBTxtFld" destination="ov7-h1-jod" id="NtE-V2-aTk"/>
+                        <outlet property="CCFirstNameTxtFld" destination="2s6-Qc-4B0" id="WRC-8T-dZv"/>
+                        <outlet property="CCLastNameTxtFld" destination="uef-11-dNZ" id="wUN-cS-FMX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
